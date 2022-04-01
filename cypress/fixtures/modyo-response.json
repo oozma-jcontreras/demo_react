@@ -1,0 +1,94 @@
+{
+    "entries": [
+        {
+            "meta": {
+                "name": "Testimonio Claudia Ugarte",
+                "slug": "testimonio-claudia-ugarte",
+                "tags": [],
+                "type": "testimonios",
+                "uuid": "54cc45c1-ace4-4f9c-8b24-6c0505fd2866",
+                "space": "trabajadores-ccla",
+                "author": {},
+                "locale": "es",
+                "private": false,
+                "targets": [],
+                "category": "nuestros-afiliados",
+                "created_at": "2022-03-23T17:04:13.000Z",
+                "updated_at": "2022-03-23T21:07:57.000Z",
+                "published_at": "2022-03-23T21:07:57.000Z",
+                "version_type": "current",
+                "category_name": "Nuestros Afiliados",
+                "category_slug": "nuestros-afiliados",
+                "unpublished_at": null,
+                "available_locales": [
+                    "es"
+                ]
+            },
+            "fields": {
+                "Cargo": "ProfeJOBS TECLA",
+                "Likes": 1283,
+                "Imagen": {
+                    "url": "https://cloud.modyocdn.com/uploads/506ce351-621d-45bf-918f-2d098e433c39/original/claudiaUgarte.png",
+                    "tags": [],
+                    "uuid": "506ce351-621d-45bf-918f-2d098e433c39",
+                    "title": "Claudia Ugarte",
+                    "alt_text": null,
+                    "description": null,
+                    "content_type": "image/png"
+                },
+                "Nombre": "Claudia Ugarte Vial",
+                "Titulo": "Afiliación Empresas",
+                "Usuario": "@Clau.Vrria",
+                "Contenido": "bla bla bla bla bla..."
+            }
+        },
+        {
+            "meta": {
+                "name": "Testimonio Antonio Saldivar",
+                "slug": "testimonio-antonio-saldivar",
+                "tags": [],
+                "type": "testimonios",
+                "uuid": "946cfe5c-4acd-46c5-9a6e-2e733e6f6be4",
+                "space": "trabajadores-ccla",
+                "author": {},
+                "locale": "es",
+                "private": false,
+                "targets": [],
+                "category": "nuestros-afiliados",
+                "created_at": "2022-03-23T14:08:28.000-03:00",
+                "updated_at": "2022-03-24T16:32:35.000-03:00",
+                "published_at": "2022-03-24T16:32:35.000-03:00",
+                "version_type": "current",
+                "category_name": "Nuestros Afiliados",
+                "category_slug": "nuestros-afiliados",
+                "unpublished_at": null,
+                "available_locales": [
+                    "es"
+                ]
+            },
+            "fields": {
+                "Cargo": "CEO Betterfly",
+                "Likes": 1238,
+                "Imagen": {
+                    "url": "https://cloud.modyocdn.com/uploads/8b0b3ccb-0e0b-471b-89aa-96358477f785/original/antonioSaldibar.png",
+                    "tags": [],
+                    "uuid": "8b0b3ccb-0e0b-471b-89aa-96358477f785",
+                    "title": "Antonio Saldibar",
+                    "alt_text": null,
+                    "description": null,
+                    "content_type": "image/png"
+                },
+                "Nombre": "Antonio Saldivar",
+                "Titulo": "Afiliación Empresas",
+                "Usuario": "@Gus_1976",
+                "Contenido": "bla bla bla"
+            }
+        }
+    ],
+    "meta": {
+        "total_entries": 2,
+        "per_page": 100,
+        "current_page": 1,
+        "total_pages": 1
+    }
+}

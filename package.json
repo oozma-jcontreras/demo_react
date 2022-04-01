@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@modyo/sdk": "^1.0.6",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -10,17 +11,47 @@
     "@types/node": "^16.11.26",
     "@types/react": "^17.0.41",
     "@types/react-dom": "^17.0.14",
+    "@uikit/ds-avatar": "../design-system/packages/ds-avatar",
+    "@uikit/ds-breadcrumbs": "../design-system/packages/ds-breadcrumbs",
+    "@uikit/ds-button": "../design-system/packages/ds-button",
+    "@uikit/ds-checkbox": "../design-system/packages/ds-checkbox",
+    "@uikit/ds-container": "../design-system/packages/ds-contenedor",
+    "@uikit/ds-despliegues": "../design-system/packages/ds-despliegues",
+    "@uikit/ds-icon": "../design-system/packages/ds-icon",
+    "@uikit/ds-input": "../design-system/packages/ds-input",
+    "@uikit/ds-message": "../design-system/packages/ds-message",
+    "@uikit/ds-noticias": "../design-system/packages/ds-noticias",
+    "@uikit/ds-pagination": "../design-system/packages/ds-pagination",
+    "@uikit/ds-radio": "../design-system/packages/ds-radio",
+    "@uikit/ds-search": "../design-system/packages/ds-buscador",
+    "@uikit/ds-select": "../design-system/packages/ds-select",
+    "@uikit/ds-slidebar": "../design-system/packages/ds-slidebar",
+    "@uikit/ds-subtabs": "../design-system/packages/ds-subtabs",
+    "@uikit/ds-switch": "../design-system/packages/ds-switch",
+    "@uikit/ds-tabs": "../design-system/packages/ds-tabs",
+    "@uikit/ds-tag": "../design-system/packages/ds-tag",
+    "@uikit/ds-textarea": "../design-system/packages/ds-textarea",
+    "@uikit/ds-tokens": "../design-system/packages/ds-tokens",
+    "axios": "^0.26.1",
+    "liquidjs": "^9.36.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.16.1",
     "react-scripts": "5.0.0",
     "typescript": "^4.6.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webcomponents-in-react": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "npx cypress run-ct",
+    "test-open": "npx cypress open-ct",
+    "test-e2e": "npx cypress run",
+    "test-e2e-open": "npx cypress open",
+    "eject": "react-scripts eject",
+    "modyo-push": "modyo-cli push",
+    "modyo-publish": "modyo-cli push --publish"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +70,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.9.12",
+    "@cypress/react": "^5.12.4",
+    "@cypress/webpack-dev-server": "^1.8.3",
+    "cypress": "^9.5.2",
+    "html-webpack-plugin": "^4.5.2"
   }
 }
