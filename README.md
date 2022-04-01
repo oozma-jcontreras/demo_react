@@ -15,12 +15,28 @@ npm start
 
 ## Ejecución de pruebas automatizadas
 
+Para ejecutar pruebas unitarias en línea de comando, se debe ejecutar lo siguiente
+
 ```sh
 npm run test
 ```
 
+Si desea ejecutar las pruebas unitarias desde la interfaz gráfica de Cypress, ejecutar lo siguiente
+
 ```sh
 npm run test-open
+```
+
+Para ejecutar pruebas end-to-end (E2E) en línea de comando, se debe ejecutar lo siguiente
+
+```sh
+npm run test-e2e
+```
+
+Si desea ejecutar las pruebas end-to-end (E2E) desde la interfaz gráfica de Cypress, ejecutar lo siguiente
+
+```sh
+npm run test-e2e-open
 ```
 
 ## Publicación en Modyo
