@@ -9,6 +9,11 @@ const localLiquidVariables = {
   },
   user: {
     access_token: null
+  },
+  vars: {
+    space: '',
+    type: '',
+    category: '',
   }
 };
 
