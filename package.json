@@ -50,8 +50,8 @@
     "test-e2e": "npx cypress run",
     "test-e2e-open": "npx cypress open",
     "eject": "react-scripts eject",
-    "modyo-push": "modyo-cli push",
-    "modyo-publish": "modyo-cli push --publish"
+    "modyo-push": "npm run build & modyo-cli push",
+    "modyo-publish": "npm run build & modyo-cli push --publish"
   },
   "eslintConfig": {
     "extends": [
