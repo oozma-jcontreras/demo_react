@@ -11,9 +11,9 @@ const localLiquidVariables = {
     access_token: null
   },
   vars: {
-    space: '',
-    type: '',
-    category: '',
+    space: 'trabajadores-ccla',
+    type: 'nuestros-afiliados',
+    category: 'testimonios',
   }
 };
 

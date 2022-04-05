@@ -4,6 +4,7 @@ import Repository from './modyo/repositories/RepositoryFactory';
 import CardComentarioAfiliado from './components/card-comentario-afiliado/CardComentarioAfiliado';
 import RespuestaModyo from './interfaces/RespuestaModyo';
 import {listarRegiones} from './services/Geo';
+import liquidParser from "./modyo/liquid/liquidParser";
 
 const ApiRepository = Repository.get('api');
 
@@ -16,9 +17,9 @@ const App = () => {
   };*/
   const getModyoData = async () => {
     try {
-      const espacioModyo: string = 'trabajadores-ccla';
-      const categoriaModyo: string = 'nuestros-afiliados';
-      const tipoBannerModyo: string = 'Testimonios';
+      const espacioModyo: string = liquidParser.parse('{{vars.space}}');
+      const categoriaModyo: string = liquidParser.parse('{{vars.category}}');
+      const tipoBannerModyo: string = liquidParser.parse('{{vars.type}}');
       const data: RespuestaModyo = await ApiRepository.getEntriesByTypeCategory(espacioModyo, tipoBannerModyo, categoriaModyo);
       setModyoData(data);
     } catch (error) {
