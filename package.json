@@ -72,6 +72,7 @@
     ]
   },
   "devDependencies": {
+    "@modyo/cli": "^3.1.18",
     "@cypress/code-coverage": "^3.9.12",
     "@cypress/react": "^5.12.4",
     "@cypress/webpack-dev-server": "^1.8.3",
