@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from 'react';
 import ValoresEconomicos from "../../interfaces/ValoresEconomicos";
-import CustomNumberInput, {CustomCheckboxInput} from "../form-components/CustomInputs";
+import {CustomCommonInput, CustomCheckboxInput} from "../form-components/CustomInputs";
 
 /**
  * Ajuste de interface para definir correctamente las props entrantes y su definición.
@@ -45,39 +45,40 @@ const SimuladorForm = (props: SimuladorFormProps) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="mb-3">
-                <CustomNumberInput
+                <CustomCommonInput
                     id={"input-Monto"}
                     label={"Ingresa el monto que necesitas:"}
+                    type={"number"}
                     name={"monto"} //El campo "name" debe ser igual al nombre de campo que se usa en 'setValues'
                     helpText={`Hasta ${maxUF} UF ($${maxUFToPesos})`}
                     changeHandler={handleChange}
                 />
             </div>
             <div className="mb-3">
-                <CustomNumberInput
+                <CustomCommonInput
                     id={"input-Cuotas"}
                     label={"Ingresa el número de cuotas:"}
+                    type={"number"}
                     name={"cuotas"} //El campo "name" debe ser igual al nombre de campo que se usa en 'setValues'
                     helpText={"Entre 1 a 60 cuotas"}
                     changeHandler={handleChange}
                 />
-
-                {/*<input*/}
-                {/*    type="number"*/}
-                {/*    className="form-control"*/}
-                {/*    id="input-Cuotas"*/}
-                {/*    aria-describedby="inputCuotas"*/}
-                {/*    step="any"*/}
-                {/*    min="1"*/}
-                {/*    max="60"*/}
-                {/*/>*/}
-
             </div>
             <div className="mb-3 form-check">
-                <CustomCheckboxInput id={"check-seguroDesgravamen"} label={"Seguro de desgravamen"}/>
+                <CustomCheckboxInput
+                    id={"check-seguroDesgravamen"}
+                    name={"seguroDesgravamen"}
+                    label={"Seguro de desgravamen"}
+                    changeHandler={handleChange}
+                />
             </div>
             <div className="mb-3 form-check">
-                <CustomCheckboxInput id={"check-seguroCesantia"} label={"Seguro de cesantía"}/>
+                <CustomCheckboxInput
+                    id={"check-seguroCesantia"}
+                    name={"seguroCesantia"}
+                    label={"Seguro de cesantía"}
+                    changeHandler={handleChange}
+                />
             </div>
 
             <button type="submit" className="btn btn-primary">Simular</button>

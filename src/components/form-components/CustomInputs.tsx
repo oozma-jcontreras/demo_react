@@ -1,51 +1,51 @@
 import React, {Fragment} from "react";
+import {CustomCheckboxLabel, CustomDefaultLabel, CustomHelpText} from "./CustomLabels";
 
-type CustomNumberInputProps = {
+type CustomInputProps = {
     id: string,
-    label: string,
-    helpText: string,
+    type: string,
     name: string,
     changeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    label?: string,
+    helpText?: string
 }
 
-type CustomCheckboxInputProps = {
+type CustomCheckboxProps = {
     id: string,
-    label: string,
+    name: string,
+    changeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    label?: string,
 }
 
-const CustomNumberInput = (props: CustomNumberInputProps) => {
-
+export const CustomCommonInput = (props: CustomInputProps) => {
     return (
         <Fragment>
-            {props.label.length > 0 &&
-                <label htmlFor={props.id} className="form-label">
-                    {props.label}
-                </label>
-            }
-
+            <CustomDefaultLabel id={props.id} text={props.label}/>
             <input
                 name={props.name}
-                type="number"
+                type={props.type}
                 className="form-control"
                 id={props.id}
                 aria-describedby={props.id}
                 onChange={props.changeHandler}
             />
 
-            {props.helpText.length > 0 &&
-                <div id={`${props.id}Help`} className="form-text">{props.helpText}</div>
-            }
+            <CustomHelpText id={props.id} text={props.helpText}/>
         </Fragment>
     );
 }
 
-export const CustomCheckboxInput = (props: CustomCheckboxInputProps) => {
+
+export const CustomCheckboxInput = (props: CustomCheckboxProps) => {
     return (
         <Fragment>
-            <input type="checkbox" className="form-check-input" id={props.id}/>
-            <label className="form-check-label" htmlFor={props.id}>{props.label}</label>
+            <input
+                type="checkbox"
+                className="form-check-input"
+                id={props.id}
+                name={props.name}
+            />
+            <CustomCheckboxLabel id={props.id} text={props.label}/>
         </Fragment>
     );
 }
-
-export default CustomNumberInput;
