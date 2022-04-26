@@ -3,8 +3,9 @@ import {CustomCheckboxLabel, CustomDefaultLabel, CustomHelpText} from "./CustomL
 
 type CustomInputProps = {
     id: string,
-    type: string,
     name: string,
+    type: string,
+    value?: string | number,
     changeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void,
     label?: string,
     helpText?: string
@@ -15,6 +16,7 @@ type CustomCheckboxProps = {
     name: string,
     changeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void,
     label?: string,
+    checked: boolean
 }
 
 export const CustomCommonInput = (props: CustomInputProps) => {
@@ -22,10 +24,11 @@ export const CustomCommonInput = (props: CustomInputProps) => {
         <Fragment>
             <CustomDefaultLabel id={props.id} text={props.label}/>
             <input
+                id={props.id}
                 name={props.name}
                 type={props.type}
+                value={props.value}
                 className="form-control"
-                id={props.id}
                 aria-describedby={props.id}
                 onChange={props.changeHandler}
             />
@@ -44,6 +47,8 @@ export const CustomCheckboxInput = (props: CustomCheckboxProps) => {
                 className="form-check-input"
                 id={props.id}
                 name={props.name}
+                checked={props.checked}
+                onChange={props.changeHandler}
             />
             <CustomCheckboxLabel id={props.id} text={props.label}/>
         </Fragment>

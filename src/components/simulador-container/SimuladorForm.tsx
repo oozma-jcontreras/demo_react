@@ -30,10 +30,14 @@ const SimuladorForm = (props: SimuladorFormProps) => {
         seguroCesantia: false
     });
 
-    // Controla los cambios de los inputs del formulario y los asigna a los elementos correspondientes del objeto que contiene
-    // los datos del formulario.
+    // Controla los cambios de los inputs del formulario y los asigna según corresponda al objeto con los datos del formulario.
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValues({...values, [event.target.name]: event.target.value});
+    }
+
+    // Controla los cambios de los checkbox-inputs del formulario y los asigna según corresponda al objeto con los datos del formulario.
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setValues({...values, [event.target.name]: event.target.checked});
     }
 
     // Controla el submit del formulario.
@@ -47,21 +51,24 @@ const SimuladorForm = (props: SimuladorFormProps) => {
             <div className="mb-3">
                 <CustomCommonInput
                     id={"input-Monto"}
-                    label={"Ingresa el monto que necesitas:"}
-                    type={"number"}
                     name={"monto"} //El campo "name" debe ser igual al nombre de campo que se usa en 'setValues'
-                    helpText={`Hasta ${maxUF} UF ($${maxUFToPesos})`}
+                    type={"number"}
+                    value={values.monto}
                     changeHandler={handleChange}
+                    label={"Ingresa el monto que necesitas:"}
+                    helpText={`Hasta ${maxUF} UF ($${maxUFToPesos})`}
+
                 />
             </div>
             <div className="mb-3">
                 <CustomCommonInput
                     id={"input-Cuotas"}
-                    label={"Ingresa el número de cuotas:"}
-                    type={"number"}
                     name={"cuotas"} //El campo "name" debe ser igual al nombre de campo que se usa en 'setValues'
-                    helpText={"Entre 1 a 60 cuotas"}
+                    type={"number"}
+                    value={values.cuotas}
                     changeHandler={handleChange}
+                    label={"Ingresa el número de cuotas:"}
+                    helpText={"Entre 1 a 60 cuotas"}
                 />
             </div>
             <div className="mb-3 form-check">
@@ -69,7 +76,8 @@ const SimuladorForm = (props: SimuladorFormProps) => {
                     id={"check-seguroDesgravamen"}
                     name={"seguroDesgravamen"}
                     label={"Seguro de desgravamen"}
-                    changeHandler={handleChange}
+                    checked={values.seguroDesgravamen}
+                    changeHandler={handleCheckboxChange}
                 />
             </div>
             <div className="mb-3 form-check">
@@ -77,7 +85,8 @@ const SimuladorForm = (props: SimuladorFormProps) => {
                     id={"check-seguroCesantia"}
                     name={"seguroCesantia"}
                     label={"Seguro de cesantía"}
-                    changeHandler={handleChange}
+                    checked={values.seguroCesantia}
+                    changeHandler={handleCheckboxChange}
                 />
             </div>
 
